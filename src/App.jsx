@@ -1,7 +1,7 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Index from "./pages/Index.jsx";
 import { Box, Flex, Link, IconButton } from '@chakra-ui/react';
-import { HamburgerIcon } from '@chakra-ui/icons';
+
 
 function App() {
   const Navbar = () => (
@@ -14,14 +14,13 @@ function App() {
           <Link href="#gallery" p={2} color="white" _hover={{ textDecoration: 'none', color: 'brand.700' }}>Gallery</Link>
           <Link href="#contact" p={2} color="white" _hover={{ textDecoration: 'none', color: 'brand.700' }}>Contact</Link>
         </Box>
-        <IconButton
+        <button
           aria-label="Open Menu"
-          size="lg"
-          icon={<HamburgerIcon />}
-          variant="outline"
-          color="white"
-          _hover={{ bg: 'brand.700' }}
-        />
+          style={{ color: 'white', fontSize: '24px', background: 'none', border: 'none' }}
+          onClick={() => console.log('toggle menu')}
+        >
+          Menu
+        </button>
       </Flex>
     </Box>
   );
